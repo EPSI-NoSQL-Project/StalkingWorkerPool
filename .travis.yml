@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.1.0
+- 1.9.3
+- jruby-19mode
+deploy:
+  provider: heroku
+  app: stalking-worker-pool-dev
+  api_key:
+    secure: kr2Rgsf3LjISic2nsjhp6QA3cAP0QLcRqAsGzWe2krkMoI4uDy+aVmomSnKxqBE/prpq0cat3M8c4WaCptiDd39UyTaJ4L3KgZ3lj7nf1IZNIBkw8sCUpx7/RYgIO70icoz+WYva2G9m//SYRdb5nkeH8Z5AAXOBtR09rIjLOHA=
+  on: develop
