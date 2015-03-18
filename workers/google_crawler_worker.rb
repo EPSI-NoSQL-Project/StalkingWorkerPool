@@ -11,17 +11,20 @@ class GoogleCrawlerWorker < Worker
   end
 
   def job
-    google_search = Nokogiri::HTML(open('http://www.google.com/search?q=' + @person['name'].gsub(' ', '+')))
-
-    results = google_search.xpath('//div[@id="search"]/*').first
-
     @data['google_crawler'] = []
-    results.xpath('.//ol/li').each do |search_entry|
-      @data['google_crawler'].push({
-        title: search_entry.xpath('.//h3[@class="r"]/a').text,
-        subtitle: search_entry.xpath('.//div[@class="f slp"]').text,
-        description: search_entry.xpath('.//span[@class="st"]').text
-      })
+
+    (0..100).step(10).each do |start_item_index|
+      google_search = Nokogiri::HTML(open('http://www.google.com/search?q=' + @person['name'].gsub(' ', '+') + '&start=' + start_item_index.to_s))
+
+      results = google_search.xpath('//div[@id="search"]/*').first
+
+      results.xpath('.//ol/li').each do |search_entry|
+        @data['google_crawler'].push({
+          title: search_entry.xpath('.//h3[@class="r"]/a').text,
+          subtitle: search_entry.xpath('.//div[@class="f slp"]').text,
+          description: search_entry.xpath('.//span[@class="st"]').text
+        })
+      end
     end
   end
 end
