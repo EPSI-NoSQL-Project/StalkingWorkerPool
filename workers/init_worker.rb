@@ -7,17 +7,15 @@ class InitWorker < Worker
     @name = 'Initialization Worker'
   end
 
-  def run
-    puts 'Running : ' + @name + '...'
-
-    job()
-  end
-
   def job
     # Create the base empty person
     @person = @database['stalker'].create_document({
       name: @person['name'],
       data: []
     })
+  end
+
+  def persist
+    # Bypass the persistance
   end
 end
