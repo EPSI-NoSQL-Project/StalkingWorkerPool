@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/assets/libs/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1></h1>
+		</div>
+
+		<div id="videos">
+
+		</div>
+
+	<script type="text/javascript" >
+		function showMyVideos(data) {
+			var feed = data.feed;
+			var entries = feed.entry || [];
+
+			var html = ['<ul>'];
+			for (var i = 0; i < entries.length; i++) 
+			{
+				var entry = entries[i];
+				var title = entry.title.$t;
+				var author = entry.author[0].name.$t;
+				var uri = entry.author[0].uri.$t;
+				var categoryLabel = entry.category[1].label;
+				var categoryTerm = entry.category[1].term;
+
+				// position géographique
+				var gmlPosition = "";
+				if(entry.georss$where != undefined)
+				{
+					gmlPosition = entry.georss$where.gml$Point.gml$pos.$t;
+				}
+
+				// liens youtube
+				var uriYoutube0 = entry.link[0].href;
+				var uriYoutube1 = entry.link[1].href;
+				var uriYoutube2 = entry.link[2].href;
+				var uriYoutube3 = entry.link[3].href;
+
+				var mediaDescription = entry.media$group.media$description.$t;
+
+				var youtubeDateRecorded = "YYYY-MM-DD"
+				if(entry.yt$recorded != undefined)
+				{
+					youtubeDateRecorded = entry.yt$recorded.$t;
+				}
+				var favoriteCount = entry.yt$statistics.favoriteCount;
+				var viewCount = entry.yt$statistics.viewCount;
+
+				var sum = title + " (" + author + ") <br/>";
+				sum += mediaDescription + "<br/>";
+				sum += uri + "<br/>";
+				sum += youtubeDateRecorded + "<br/>";
+				sum += favoriteCount + " " + viewCount + "<br/>";
+				sum += categoryLabel + " - " + categoryTerm + "<br/>";
+				sum += gmlPosition + "<br/>";
+				sum += uriYoutube0 + "<br/>";
+				sum += uriYoutube1 + "<br/>";
+				sum += uriYoutube2 + "<br/>";
+				sum += uriYoutube3 + "<br/>";
+				sum += "<br/><br/>";
+
+				html.push('<li>', sum, '</li>');
+			}
+			html.push('</ul>');
+			document.getElementById('videos').innerHTML = html.join('');
+		} 
+	</script>
+
+	<script type="text/javascript" 
+	src="http://gdata.youtube.com/feeds/api/users/k2r79/uploads?v=2&alt=json-in-script&format=5&callback=showMyVideos">
+	</script>
+</body>
+</html>
