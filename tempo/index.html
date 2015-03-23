@@ -18,6 +18,9 @@
 
 	<script type="text/javascript" >
 		function showMyVideos(data) {
+
+			console.log(data);
+
 			var feed = data.feed;
 			var entries = feed.entry || [];
 
@@ -45,6 +48,7 @@
 				var uriYoutube3 = entry.link[3].href;
 
 				var mediaDescription = entry.media$group.media$description.$t;
+				var mediaDuration = entry.media$group.media$content[0].duration;
 
 				var youtubeDateRecorded = "YYYY-MM-DD"
 				if(entry.yt$recorded != undefined)
@@ -55,7 +59,8 @@
 				var viewCount = entry.yt$statistics.viewCount;
 
 				var sum = title + " (" + author + ") <br/>";
-				sum += mediaDescription + "<br/>";
+				sum += mediaDescription + " <br/>" 
+				sum += mediaDuration + " sec  <br/>";
 				sum += uri + "<br/>";
 				sum += youtubeDateRecorded + "<br/>";
 				sum += favoriteCount + " " + viewCount + "<br/>";
