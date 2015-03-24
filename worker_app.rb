@@ -1,5 +1,5 @@
 require './workers/init_worker'
-require './workers/test_worker'
+require './workers/google_crawler_worker'
 require 'ashikawa-core'
 require 'yell'
 require 'redis'
@@ -13,6 +13,8 @@ arangodb = Ashikawa::Core::Database.new do |config|
   config.url = 'http://localhost:8529'
   config.logger = logger
 end
+
+Thread.abort_on_exception = true
 
 worker_pool = Thread.new do
   while true do
@@ -30,12 +32,12 @@ worker_pool = Thread.new do
       person['key'] = init_worker.person.key
 
       # Add workers here
-      ##### EXAMPLE ######
+
+      ##### GOOGLE CRAWLER ######
       Thread.new do
-        test_worker = TestWorker.new(arangodb, person)
-        test_worker.run
+        google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
+        google_crawler_worker.run
       end
-      ##### END EXAMPLE ######
     end
   end
 end
