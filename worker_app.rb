@@ -1,5 +1,6 @@
 require './workers/init_worker'
 require './workers/google_crawler_worker'
+require './workers/enjoygram_crawler_worker'
 require 'ashikawa-core'
 require 'yell'
 require 'redis'
@@ -37,6 +38,12 @@ worker_pool = Thread.new do
       Thread.new do
         google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
         google_crawler_worker.run
+      end
+
+      ##### ENJOYGRAM CRAWLER ######
+      Thread.new do
+        enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
+        enjoygram_worker.run
       end
     end
   end
