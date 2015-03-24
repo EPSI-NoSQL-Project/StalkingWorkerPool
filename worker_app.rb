@@ -1,5 +1,5 @@
 require './workers/init_worker'
-require './workers/test_worker'
+require './workers/youtube_crawler_worker'
 require 'ashikawa-core'
 require 'yell'
 require 'redis'
@@ -14,30 +14,42 @@ arangodb = Ashikawa::Core::Database.new do |config|
   config.logger = logger
 end
 
-worker_pool = Thread.new do
-  while true do
-    person = redis.rpop('workers')
+person = {'name' => 'k2r79'}
 
-    if person
-      # Parse the JSON
-      person = JSON.parse(person)
+# Run the initialization worker
+init_worker = InitWorker.new(arangodb, person)
+init_worker.run
 
-      # Run the initialization worker
-      init_worker = InitWorker.new(arangodb, person)
-      init_worker.run
+person['key'] = init_worker.person.key
 
-      # Set the ArangoDB document key
-      person['key'] = init_worker.person.key
+youtube_crawler_worker = YoutubeCrawlerWorker.new(arangodb, person)
+youtube_crawler_worker.run
 
-      # Add workers here
-      ##### EXAMPLE ######
-      Thread.new do
-        test_worker = TestWorker.new(arangodb, person)
-        test_worker.run
-      end
-      ##### END EXAMPLE ######
-    end
-  end
-end
 
-worker_pool.join
+# worker_pool = Thread.new do
+#   while true do
+#     person = redis.rpop('workers')
+
+#     if person
+#       # Parse the JSON
+#       person = JSON.parse(person)
+
+#       # Run the initialization worker
+#       init_worker = InitWorker.new(arangodb, person)
+#       init_worker.run
+
+#       # Set the ArangoDB document key
+#       person['key'] = init_worker.person.key
+
+#       # Add workers here
+#       ##### EXAMPLE ######
+#       Thread.new do
+#         youtube_crawler_worker = YoutubeCrawlerWorker.new(arangodb, person)
+#         youtube_crawler_worker.run
+#       end
+#       ##### END EXAMPLE ######
+#     end
+#   end
+# end
+
+# worker_pool.join
