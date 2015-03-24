@@ -11,35 +11,37 @@ class YoutubeCrawlerWorker < Worker
   end
 
   def job
-    puts @person['name']
+    @data['youtube_crawler'] = []
 
-    #youtube_uri = 'http://gdata.youtube.com/feeds/api/users/' + @person['name'] + '/uploads?v=2&format=5&max-results=5'
     youtube_uri = 'http://gdata.youtube.com/feeds/api/users/' + @person['name'] + '/uploads?v=2&format=5'
     youtube_data = Nokogiri::XML(open(youtube_uri)) 
 
     youtube_data.search('entry').each do |entry|
 
-      puts entry.at('author').at('name').text
-      puts entry.at('author').at('uri').text
-      puts entry.at('author').at('.//yt:userId').text
-      puts entry.at('title').text
-      puts entry.at('.//media:description').text
-      puts entry.at('published').text
-      puts entry.at('updated').text
-      puts entry.at('.//media:category').text
-      puts entry.at('.//media:credit').text
-      puts entry.at('.//media:player').attribute('url')
-      puts entry.at('.//media:content').attribute('duration')
-
-      puts entry.at('.//yt:statistics').attribute('viewCount')
-      puts entry.at('.//yt:statistics').attribute('favoriteCount')
+      numDislikes = 0
+      numLikes = 0
       if ( entry.at('.//yt:rating') )
-        puts entry.at('.//yt:rating').attribute('numDislikes')
-        puts entry.at('.//yt:rating').attribute('numLikes')
-      else
-        puts "0"
-        puts "0"
+        numDislikes = entry.at('.//yt:rating').attribute('numDislikes')
+        numLikes = entry.at('.//yt:rating').attribute('numLikes')
       end
+
+      @data['youtube_crawler'].push({
+        'author' => entry.at('author').at('name').text,
+        'pseudo' => entry.at('.//media:credit').text,
+        'user_id' => entry.at('author').at('.//yt:userId').text,
+        'author_uri' => entry.at('author').at('uri').text,
+        'title' => entry.at('title').text,
+        'description' => entry.at('.//media:description').text,
+        'published' => entry.at('published').text,
+        'updated' => entry.at('updated').text,
+        'category' => entry.at('.//media:category').text,
+        'url' => entry.at('.//media:player').attribute('url'),
+        'duration' => entry.at('.//media:content').attribute('duration'),
+        'viewCount' => entry.at('.//yt:statistics').attribute('viewCount'),
+        'favoriteCount' => entry.at('.//yt:statistics').attribute('favoriteCount'),
+        'numDislikes' => numDislikes,
+        'numLikes' => numLikes,
+      })
     end
 
   end

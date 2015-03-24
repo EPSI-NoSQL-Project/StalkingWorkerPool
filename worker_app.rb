@@ -24,32 +24,3 @@ person['key'] = init_worker.person.key
 
 youtube_crawler_worker = YoutubeCrawlerWorker.new(arangodb, person)
 youtube_crawler_worker.run
-
-
-# worker_pool = Thread.new do
-#   while true do
-#     person = redis.rpop('workers')
-
-#     if person
-#       # Parse the JSON
-#       person = JSON.parse(person)
-
-#       # Run the initialization worker
-#       init_worker = InitWorker.new(arangodb, person)
-#       init_worker.run
-
-#       # Set the ArangoDB document key
-#       person['key'] = init_worker.person.key
-
-#       # Add workers here
-#       ##### EXAMPLE ######
-#       Thread.new do
-#         youtube_crawler_worker = YoutubeCrawlerWorker.new(arangodb, person)
-#         youtube_crawler_worker.run
-#       end
-#       ##### END EXAMPLE ######
-#     end
-#   end
-# end
-
-# worker_pool.join

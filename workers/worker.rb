@@ -9,20 +9,26 @@ class Worker
   def initialize(database, person)
     @database = database
     @person = person
+    @data = {}
   end
 
   def run
     puts 'Running : ' + @name + '...'
 
     job()
+    persist()
 
-    @person = @database['stalker'].fetch(@person['key'])
-    @person['data'] << @data
-    @person.save
+    puts 'Finished : ' + @name + '.'
   end
 
   def job
     # Fill this part with the job to do
+  end
+
+  def persist
+    @person = @database['stalker'].fetch(@person['key'])
+    @person['data'] << @data
+    @person.save
   end
 
   def person
