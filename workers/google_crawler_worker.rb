@@ -14,7 +14,7 @@ class GoogleCrawlerWorker < Worker
     @data['google_crawler'] = []
 
     (0..100).step(10).each do |start_item_index|
-      google_search = Nokogiri::HTML(open('http://www.google.com/search?q=' + @person['name'].gsub(' ', '+') + '&start=' + start_item_index.to_s))
+      google_search = Nokogiri::HTML(open('http://www.google.com/search?q=' + @person['name'].gsub(' ', '+') + '+' + @person['location'].gsub(' ', '+') + '&start=' + start_item_index.to_s))
 
       results = google_search.xpath('//div[@id="search"]/*').first
 

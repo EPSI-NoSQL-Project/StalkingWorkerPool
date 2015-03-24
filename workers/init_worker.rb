@@ -11,6 +11,7 @@ class InitWorker < Worker
     # Create the base empty person
     @person = @database['stalker'].create_document({
       name: @person['name'],
+      location: @person['location'],
       data: []
     })
   end
