@@ -9,7 +9,7 @@ class InitWorker < Worker
 
   def job
     # Create the base empty person
-    @person = @database['stalker'].create_document({
+    @person = @database['people'].create_document({
       name: @person['name'],
       location: @person['location'],
       data: []

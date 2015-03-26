@@ -43,11 +43,25 @@ class EnjoyGramWorker < Worker
             comments: []
         }
 
+        # Crawl each person that liked the image
+        enjoygram_image_container.xpath('.//div[@class="right"]//div[contains(@class, "likes")]/a').each do |enjoygram_liker|
+          @relatives << {
+              username: enjoygram_liker['href'],
+              image: enjoygram_liker.xpath('.//img').first['src']
+          }
+        end
+
+
         # Crawl each image's comments
         enjoygram_image_container.xpath('.//div[@class="right"]//div[@class="comments-wrapper"]/div[@class="comments-box"]/div[@class="comment"]').each do |comment_container|
           enjoygram_comment = {
               username: comment_container.xpath('.//div[@class="comment-content"]/a').text,
               comment: comment_container.xpath('.//div[@class="comment-content"]/span[contains(@class, "text")]').text
+          }
+
+          @relatives << {
+              username: comment_container.xpath('.//div[@class="comment-content"]/a').text,
+              image: comment_container.xpath('.//a/img').first['src']
           }
 
           enjoygram_image[:comments].push(enjoygram_comment)

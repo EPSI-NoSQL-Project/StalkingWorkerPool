@@ -4,12 +4,14 @@ class Worker
   @name
   @database
   @person
+  @relatives
   @data
 
   def initialize(database, person)
     @database = database
     @person = person
     @data = {}
+    @relatives = []
   end
 
   def run
@@ -26,9 +28,17 @@ class Worker
   end
 
   def persist
-    @person = @database['stalker'].fetch(@person['key'])
+    # Persist the information about the person
+    @person = @database['people'].fetch(@person['key'])
     @person['data'] << @data
     @person.save
+
+    # Persist the relatives of the person
+    @relatives.each do |relative|
+      relative = @database['people'].create_document(relative)
+
+      @database.graph('relatives').edge_collection('relations').add(from: @person, to: relative)
+    end
   end
 
   def person

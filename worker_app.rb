@@ -37,7 +37,7 @@ worker_pool = Thread.new do
       ##### GOOGLE CRAWLER ######
       Thread.new do
         google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
-        google_crawler_worker.run
+        #google_crawler_worker.run
       end
 
       ##### ENJOYGRAM CRAWLER ######
