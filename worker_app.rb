@@ -5,6 +5,7 @@ require 'ashikawa-core'
 require 'yell'
 require 'redis'
 require 'json'
+require 'elasticsearch'
 
 logger = Yell.new(STDOUT)
 
@@ -14,6 +15,8 @@ arangodb = Ashikawa::Core::Database.new do |config|
   config.url = 'http://localhost:8529'
   config.logger = logger
 end
+
+elasticsearch = Elasticsearch::Client.new host: '127.0.0.1', port: 9200, log: true
 
 Thread.abort_on_exception = true
 
@@ -26,7 +29,7 @@ worker_pool = Thread.new do
       person = JSON.parse(person)
 
       # Run the initialization worker
-      init_worker = InitWorker.new(arangodb, person)
+      init_worker = InitWorker.new(arangodb, elasticsearch, person)
       init_worker.run
 
       # Set the ArangoDB document key
@@ -36,13 +39,13 @@ worker_pool = Thread.new do
 
       ##### GOOGLE CRAWLER ######
       Thread.new do
-        google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
-        #google_crawler_worker.run
+        google_crawler_worker = GoogleCrawlerWorker.new(arangodb, elasticsearch, person)
+        google_crawler_worker.run
       end
 
       ##### ENJOYGRAM CRAWLER ######
       Thread.new do
-        enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
+        enjoygram_worker = EnjoyGramWorker.new(arangodb, elasticsearch, person)
         enjoygram_worker.run
       end
     end

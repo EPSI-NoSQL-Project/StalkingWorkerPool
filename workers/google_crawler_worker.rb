@@ -4,8 +4,8 @@ require 'nokogiri'
 require 'open-uri'
 
 class GoogleCrawlerWorker < Worker
-  def initialize(database, person)
-    super(database, person)
+  def initialize(arangodb, elasticsearch, person)
+    super(arangodb, elasticsearch, person)
 
     @name = 'Google Crawler Worker'
   end

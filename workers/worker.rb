@@ -2,13 +2,15 @@ require 'json'
 
 class Worker
   @name
-  @database
+  @arangodb
+  @elasticsearch
   @person
   @relatives
   @data
 
-  def initialize(database, person)
-    @database = database
+  def initialize(arangodb, elasticsearch, person)
+    @arangodb = arangodb
+    @elasticsearch = elasticsearch
     @person = person
     @data = {}
     @relatives = []
@@ -29,15 +31,15 @@ class Worker
 
   def persist
     # Persist the information about the person
-    @person = @database['people'].fetch(@person['key'])
+    @person = @arangodb['people'].fetch(@person['key'])
     @person['data'] << @data
     @person.save
 
     # Persist the relatives of the person
     @relatives.each do |relative|
-      relative = @database['people'].create_document(relative)
+      relative = @arangodb['people'].create_document(relative)
 
-      @database.graph('relatives').edge_collection('relations').add(from: @person, to: relative)
+      @arangodb.graph('relatives').edge_collection('relations').add(from: @person, to: relative)
     end
   end
 
