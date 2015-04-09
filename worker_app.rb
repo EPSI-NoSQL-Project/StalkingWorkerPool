@@ -48,6 +48,13 @@ worker_pool = Thread.new do
         enjoygram_worker = EnjoyGramWorker.new(arangodb, elasticsearch, person)
         enjoygram_worker.run
       end
+
+      ##### TWITTER CRAWLER ######
+      Thread.new do
+        twitter_crawler_worker = TwitterCrawlerWorker.new(arangodb, elasticsearch, person)
+        twitter_crawler_worker.run
+      end
+
     end
   end
 end

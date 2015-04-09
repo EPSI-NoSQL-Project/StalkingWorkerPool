@@ -1,8 +1,8 @@
 require './workers/worker'
 
 class TestWorker < Worker
-  def initialize(database, person)
-    super(database, person)
+  def initialize(database, elasticsearch, person)
+    super(database, elasticsearch, person)
 
     @name = 'Test Worker'
   end
