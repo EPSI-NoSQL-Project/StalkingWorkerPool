@@ -3,14 +3,14 @@ require 'json'
 class Worker
   @name
   @arangodb
-  @elasticsearch
+  # @elasticsearch
   @person
   @relatives
   @data
 
-  def initialize(arangodb, elasticsearch, person)
+  def initialize(arangodb, person)
     @arangodb = arangodb
-    @elasticsearch = elasticsearch
+    # @elasticsearch = elasticsearch
     @person = person
     @data = {}
     @relatives = []

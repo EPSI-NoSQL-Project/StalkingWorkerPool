@@ -25,7 +25,9 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
+    oauth (0.4.7)
     rake (10.4.2)
+    rb-readline (0.5.2)
     redis (3.2.0)
     yell (2.0.5)
 
@@ -37,6 +39,8 @@ DEPENDENCIES
   bundle
   elasticsearch
   nokogiri
+  oauth
   rake
+  rb-readline
   redis
   yell
