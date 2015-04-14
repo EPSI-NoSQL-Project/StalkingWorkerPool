@@ -8,11 +8,10 @@ class EnjoyGramWorker < Worker
     super(arangodb, elasticsearch, person)
 
     @name = 'Enjoygram Crawler Worker'
+    @data_name = 'enjoygram_crawler'
   end
 
   def job
-    @data['enjoygram_crawler'] = []
-
     enjoygram_search = Nokogiri::HTML(open('http://www.enjoygram.com/search/' + @person['name'].gsub(' ', '+')))
 
     # User search results
@@ -70,7 +69,7 @@ class EnjoyGramWorker < Worker
         enjoygram_user[:images].push(enjoygram_image)
       end
 
-      @data['enjoygram_crawler'].push(enjoygram_user)
+      @data.push(enjoygram_user)
     end
   end
 end

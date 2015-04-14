@@ -2,6 +2,7 @@ require 'json'
 
 class Worker
   @name
+  @data_name
   @arangodb
   @elasticsearch
   @person
@@ -12,7 +13,7 @@ class Worker
     @arangodb = arangodb
     @elasticsearch = elasticsearch
     @person = person
-    @data = {}
+    @data = []
     @relatives = []
   end
 
@@ -32,7 +33,11 @@ class Worker
   def persist
     # Persist the information about the person
     @person = @arangodb['people'].fetch(@person['key'])
-    @person['data'] << @data
+
+    if @data_name
+      @person['data'][@data_name] = @data
+    end
+
     @person.save
 
     # Persist the relatives of the person

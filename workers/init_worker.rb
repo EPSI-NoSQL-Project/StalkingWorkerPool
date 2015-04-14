@@ -12,7 +12,7 @@ class InitWorker < Worker
     @person = @arangodb['people'].create_document({
       name: @person['name'],
       location: @person['location'],
-      data: []
+      data: {}
     })
 
     @elasticsearch.index index: 'people', type: 'person', id: @person.key,
