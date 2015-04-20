@@ -24,7 +24,7 @@ Thread.abort_on_exception = true
 worker_pool = Thread.new do
   while true do
     # person = redis.rpop('workers')
-    person = {'name' => 'Mailys_Airouche'}
+    person = {'name' => 'Korben'}
     if person
       # Parse the JSON
       # person = JSON.parse(person)
@@ -39,16 +39,16 @@ worker_pool = Thread.new do
       # Add workers here
 
       ##### GOOGLE CRAWLER ######
-      Thread.new do
-        google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
-        google_crawler_worker.run
-      end
-      #
-      # ##### ENJOYGRAM CRAWLER ######
-      Thread.new do
-        enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
-        enjoygram_worker.run
-      end
+      # Thread.new do
+      #   google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
+      #   google_crawler_worker.run
+      # end
+      # #
+      # # ##### ENJOYGRAM CRAWLER ######
+      # Thread.new do
+      #   enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
+      #   enjoygram_worker.run
+      # end
 
       ##### TWITTER CRAWLER ######
       Thread.new do
