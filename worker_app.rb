@@ -51,10 +51,15 @@ worker_pool = Thread.new do
       # end
 
       ##### TWITTER CRAWLER ######
-      Thread.new do
-        twitter_crawler = TwitterCrawlerWorker.new(arangodb, person)
-        twitter_crawler.run
-      end
+      # Thread.new do
+      #   twitter_crawler = TwitterCrawlerWorker.new(arangodb, person)
+      #   twitter_crawler.run
+      # end
+      #
+      # Thread.new do
+        facebook_crawler = FacebookCrawlerWorker.new(arangodb, person)
+        facebook_crawler.run
+      # end
 
     end
   end
