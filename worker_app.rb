@@ -38,16 +38,75 @@ worker_pool = Thread.new do
       # Add workers here
 
       ##### GOOGLE CRAWLER ######
-      Thread.new do
+      google_crawler_thread = Thread.new do
         google_crawler_worker = GoogleCrawlerWorker.new(arangodb, elasticsearch, person)
         google_crawler_worker.run
       end
 
       ##### ENJOYGRAM CRAWLER ######
-      Thread.new do
+      enjoygram_crawler_thread = Thread.new do
         enjoygram_worker = EnjoyGramWorker.new(arangodb, elasticsearch, person)
         enjoygram_worker.run
       end
+
+      # Wait for crawlers
+      google_crawler_thread.join
+      enjoygram_crawler_thread.join
+
+      # Add the tags to ElasticSearch
+      keywords = arangodb.query.execute('
+        LET special_chars = [ ".", "-", ",", ":", ";", "·", "\n", "(", ")" ]
+
+        LET keywords = (
+            FOR person in people
+            FILTER person._key == @person_key
+            LET google_data = APPEND(
+                    SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].title), special_chars, ""), " "),
+                    APPEND(
+                        SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].subtitle), special_chars, ""), " "),
+                        SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].description), special_chars, ""), " ")
+                    )
+                )
+            LET enjoygram_data = APPEND(
+                    SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].bio), special_chars, ""), " "),
+                    APPEND(
+                        SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].images[*].description), special_chars, ""), " "),
+                        SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].images[*].comments[*].comment), special_chars, ""), " ")
+                    )
+                )
+
+            RETURN APPEND(google_data, enjoygram_data)
+            )
+
+        FOR keyword IN keywords[0]
+        COLLECT tmp_keyword = keyword INTO collected_keyword
+        FILTER LENGTH(tmp_keyword) > 2
+        LET score = LENGTH(collected_keyword) * LENGTH(tmp_keyword)
+        SORT score DESC
+        RETURN {
+          "keyword": tmp_keyword,
+          "occurences": LENGTH(collected_keyword),
+          "score": score
+        }
+      ', bind_vars: { 'person_key' => person['key'] }).to_a
+
+      # Make the tags insertable in ElasticSearch
+      tags = []
+      for keyword in keywords
+        tags << {
+            label: keyword['keyword'],
+            score: keyword['score']
+        }
+      end
+
+      elasticsearch.update index: 'people', type: 'person', id: person['key'],
+       body: {
+           doc: {
+               tags: tags
+           }
+       }
+
+      puts 'Finished stalking ' + person['name'] + ' in ' + person['location'] + '.'
     end
   end
 end
