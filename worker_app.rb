@@ -3,6 +3,7 @@ require './workers/google_crawler_worker'
 require './workers/enjoygram_crawler_worker'
 require './workers/twitter_crawler_worker'
 require './workers/facebook_crawler_worker'
+require './workers/youtube_crawler_worker'
 require 'ashikawa-core'
 require 'yell'
 require 'redis'
@@ -34,6 +35,8 @@ worker_pool = Thread.new do
       init_worker = InitWorker.new(arangodb, person)
       init_worker.run
 
+youtube_crawler_worker = YoutubeCrawlerWorker.new(arangodb, person)
+youtube_crawler_worker.run
       # Set the ArangoDB document key
       person['key'] = init_worker.person.key
 

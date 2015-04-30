@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:gd="http://schemas.google.com/g/2005" xmlns:yt="http://gdata.youtube.com/schemas/2007" xmlns:openSearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" xmlns:media="http://search.yahoo.com/mrss/" xmlns:app="http://www.w3.org/2007/app" gd:etag="W/&quot;DkAAQX8-cSp7I2A9XRRUEUg.&quot;">
+  <id>tag:youtube.com,2008:user:k2r79:uploads</id>
+  <updated>2015-03-23T23:52:20.159Z</updated>
+  <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+  <title>Uploads by Vincent Kelleher</title>
+  <logo>http://www.gstatic.com/youtube/img/logo.png</logo>
+  <link rel="related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79?v=2"/>
+  <link rel="alternate" type="text/html" href="http://www.youtube.com/channel/UCQ8RpCPVM0ZTs-cSjehIBlg/videos"/>
+  <link rel="hub" href="http://pubsubhubbub.appspot.com"/>
+  <link rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads?v=2"/>
+  <link rel="http://schemas.google.com/g/2005#batch" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/batch?v=2"/>
+  <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads?start-index=1&amp;max-results=10&amp;format=5&amp;v=2"/>
+  <link rel="service" type="application/atomsvc+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads?alt=atom-service&amp;v=2"/>
+  <link rel="next" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads?start-index=11&amp;max-results=10&amp;format=5&amp;v=2"/>
+  <author>
+    <name>Vincent Kelleher</name>
+    <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+    <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+  </author>
+  <generator version="2.1" uri="http://gdata.youtube.com">YouTube data API</generator>
+  <openSearch:totalResults>25</openSearch:totalResults>
+  <openSearch:startIndex>1</openSearch:startIndex>
+  <openSearch:itemsPerPage>10</openSearch:itemsPerPage>
+  <entry gd:etag="W/&quot;D0IFSH47eCp7I2A9XRZbEEQ.&quot;">
+    <id>tag:youtube.com,2008:video:wTuizs47J7o</id>
+    <published>2014-08-11T15:17:43.000Z</published>
+    <updated>2014-08-15T09:38:39.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Travel" label="Travel &amp; Events"/>
+    <title>Timelapse | Orcieres-Merlette</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/wTuizs47J7o?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=wTuizs47J7o&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/wTuizs47J7o/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=wTuizs47J7o"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/wTuizs47J7o?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/wTuizs47J7o/comments?v=2" countHint="1"/>
+    </gd:comments>
+    <georss:where>
+      <gml:Point>
+        <gml:pos>44.677799224853516 6.276790142059326</gml:pos>
+      </gml:Point>
+    </georss:where>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Travel &amp; Events" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Travel</media:category>
+      <media:content url="http://www.youtube.com/v/wTuizs47J7o?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="40" yt:format="5"/>
+      <media:content url="rtsp://r7---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwm6JzvOzqI7wRMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="40" yt:format="1"/>
+      <media:content url="rtsp://r7---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwm6JzvOzqI7wRMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="40" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Quick timelapse shot in Orcieres-Merlette, France. Camera : GoPro Hero 3 Black Edition Setting : Timelapse @ 2s Editing : Premiere Pro CC Music : Beggars in a New Land - Teenager with Energy...</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=wTuizs47J7o&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/default.jpg" height="90" width="120" time="00:00:20" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/1.jpg" height="90" width="120" time="00:00:10" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/2.jpg" height="90" width="120" time="00:00:20" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/wTuizs47J7o/3.jpg" height="90" width="120" time="00:00:30" yt:name="end"/>
+      <media:title type="plain">Timelapse | Orcieres-Merlette</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="40"/>
+      <yt:uploaded>2014-08-11T15:17:43.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>wTuizs47J7o</yt:videoid>
+    </media:group>
+    <yt:recorded>2014-08-10</yt:recorded>
+    <yt:statistics favoriteCount="0" viewCount="95"/>
+  </entry>
+  <entry gd:etag="W/&quot;CUUCQH47eCp7I2A9XRdTFU4.&quot;">
+    <id>tag:youtube.com,2008:video:FIyH8i7_OrA</id>
+    <published>2014-05-18T21:51:45.000Z</published>
+    <updated>2014-09-12T14:47:41.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Sports" label="Sports"/>
+    <title>Bordeaux - Roller sur les Quais</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/FIyH8i7_OrA?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=FIyH8i7_OrA&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/FIyH8i7_OrA/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=FIyH8i7_OrA"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/FIyH8i7_OrA?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/FIyH8i7_OrA/comments?v=2" countHint="1"/>
+    </gd:comments>
+    <georss:where>
+      <gml:Point>
+        <gml:pos>44.844940185546875 -0.5699099898338318</gml:pos>
+      </gml:Point>
+    </georss:where>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Sports" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Sports</media:category>
+      <media:content url="http://www.youtube.com/v/FIyH8i7_OrA?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="182" yt:format="5"/>
+      <media:content url="rtsp://r7---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwmwOv8u8oeMFBMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="182" yt:format="1"/>
+      <media:content url="rtsp://r7---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwmwOv8u8oeMFBMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="182" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Vidéo d'une petite balade à roller sur les quais de Bordeaux le 18 mai 2014. Camera : GoPro Hero 3 Black Edition Perche : SP Remote Pole 39" Montage : Adobe Premiere Pro CS6.</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=FIyH8i7_OrA&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/default.jpg" height="90" width="120" time="00:01:31" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/1.jpg" height="90" width="120" time="00:00:45.500" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/2.jpg" height="90" width="120" time="00:01:31" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/FIyH8i7_OrA/3.jpg" height="90" width="120" time="00:02:16.500" yt:name="end"/>
+      <media:title type="plain">Bordeaux - Roller sur les Quais</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="182"/>
+      <yt:uploaded>2014-05-18T21:51:45.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>FIyH8i7_OrA</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="5" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:recorded>2014-05-18</yt:recorded>
+    <yt:statistics favoriteCount="0" viewCount="344"/>
+    <yt:rating numDislikes="0" numLikes="5"/>
+  </entry>
+  <entry gd:etag="W/&quot;A0UAR347eCp7I2A9XRRWEk0.&quot;">
+    <id>tag:youtube.com,2008:video:vNkpnMvZY_8</id>
+    <published>2013-12-08T22:15:00.000Z</published>
+    <updated>2015-03-01T11:27:26.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Sports" label="Sports"/>
+    <title>Bordeaux by Night - Rollerblading</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/vNkpnMvZY_8?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=vNkpnMvZY_8&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/vNkpnMvZY_8/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=vNkpnMvZY_8"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/vNkpnMvZY_8?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/vNkpnMvZY_8/comments?v=2" countHint="0"/>
+    </gd:comments>
+    <georss:where>
+      <gml:Point>
+        <gml:pos>44.84199142456055 -0.5744400024414062</gml:pos>
+      </gml:Point>
+    </georss:where>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Sports" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Sports</media:category>
+      <media:content url="http://www.youtube.com/v/vNkpnMvZY_8?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="212" yt:format="5"/>
+      <media:content url="rtsp://r2---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwn_Y9nLnCnZvBMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="212" yt:format="1"/>
+      <media:content url="rtsp://r2---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwn_Y9nLnCnZvBMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="212" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Petite balade à roller dans les rues de Bordeaux pendant le rush de Noël : Rue Sainte-Catherine, Grand Théatre, Grand Hotel, ...</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=vNkpnMvZY_8&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/default.jpg" height="90" width="120" time="00:01:46" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/1.jpg" height="90" width="120" time="00:00:53" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/2.jpg" height="90" width="120" time="00:01:46" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/vNkpnMvZY_8/3.jpg" height="90" width="120" time="00:02:39" yt:name="end"/>
+      <media:title type="plain">Bordeaux by Night - Rollerblading</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="212"/>
+      <yt:uploaded>2013-12-08T22:15:00.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>vNkpnMvZY_8</yt:videoid>
+    </media:group>
+    <gd:rating average="3.6666667" max="5" min="1" numRaters="3" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:recorded>2013-12-08</yt:recorded>
+    <yt:statistics favoriteCount="0" viewCount="202"/>
+    <yt:rating numDislikes="1" numLikes="2"/>
+  </entry>
+  <entry gd:etag="W/&quot;A0UAR347eCp7I2A9XRRWEk0.&quot;">
+    <id>tag:youtube.com,2008:video:rpte21CAJYs</id>
+    <published>2013-05-16T17:38:33.000Z</published>
+    <updated>2015-03-01T11:27:26.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Howto" label="Howto &amp; Style"/>
+    <title>Timelapse - Lycée Agricole Murat</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/rpte21CAJYs?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=rpte21CAJYs&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/rpte21CAJYs/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=rpte21CAJYs"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/rpte21CAJYs?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/rpte21CAJYs/comments?v=2" countHint="1"/>
+    </gd:comments>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Howto &amp; Style" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Howto</media:category>
+      <media:content url="http://www.youtube.com/v/rpte21CAJYs?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="20" yt:format="5"/>
+      <media:content url="rtsp://r7---sn-4g57kue6.c.youtube.com/CigLENy73wIaHwmLJYBQ216brhMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="20" yt:format="1"/>
+      <media:content url="rtsp://r7---sn-4g57kue6.c.youtube.com/CigLENy73wIaHwmLJYBQ216brhMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="20" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Scene shot from my balcony with the camera set up on a tripod for a bit less than an hour. Camera : Canon EOS 600D with Magic Lantern Lens : Canon EFS 18-55mm IS f/2.8 USM Intervalometer...</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=rpte21CAJYs&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/default.jpg" height="90" width="120" time="00:00:10" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/1.jpg" height="90" width="120" time="00:00:05" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/2.jpg" height="90" width="120" time="00:00:10" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/rpte21CAJYs/3.jpg" height="90" width="120" time="00:00:15" yt:name="end"/>
+      <media:title type="plain">Timelapse - Lycée Agricole Murat</media:title>
+      <yt:duration seconds="20"/>
+      <yt:uploaded>2013-05-16T17:38:33.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>rpte21CAJYs</yt:videoid>
+    </media:group>
+    <yt:statistics favoriteCount="0" viewCount="91"/>
+  </entry>
+  <entry gd:etag="W/&quot;A0UAR347eCp7I2A9XRRWEk0.&quot;">
+    <id>tag:youtube.com,2008:video:E4oc34EIZeI</id>
+    <published>2013-02-13T23:47:48.000Z</published>
+    <updated>2015-03-01T11:27:26.000Z</updated>
+    <app:control>
+      <yt:state name="restricted" reasonCode="limitedSyndication">Syndication of this video was restricted.</yt:state>
+    </app:control>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Sports" label="Sports"/>
+    <title>Session Roller sur les Quais de Bordeaux</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/E4oc34EIZeI?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=E4oc34EIZeI&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/E4oc34EIZeI/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/E4oc34EIZeI?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="denied"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/E4oc34EIZeI/comments?v=2" countHint="2"/>
+    </gd:comments>
+    <georss:where>
+      <gml:Point>
+        <gml:pos>44.843929290771484 -0.5699499845504761</gml:pos>
+      </gml:Point>
+    </georss:where>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Sports" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Sports</media:category>
+      <media:content url="http://www.youtube.com/v/E4oc34EIZeI?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="117" yt:format="5"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Session du 13 février 2013 sur le Quai Louis XVIII avec toute la team :)</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=E4oc34EIZeI&amp;feature=youtube_gdata_player"/>
+      <media:restriction type="country" relationship="deny">DE</media:restriction>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/default.jpg" height="90" width="120" time="00:00:58.500" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/1.jpg" height="90" width="120" time="00:00:29.250" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/2.jpg" height="90" width="120" time="00:00:58.500" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/E4oc34EIZeI/3.jpg" height="90" width="120" time="00:01:27.750" yt:name="end"/>
+      <media:title type="plain">Session Roller sur les Quais de Bordeaux</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="117"/>
+      <yt:uploaded>2013-02-13T23:47:48.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>E4oc34EIZeI</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="3" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:statistics favoriteCount="0" viewCount="207"/>
+    <yt:rating numDislikes="0" numLikes="3"/>
+  </entry>
+  <entry gd:etag="W/&quot;A0UAR347eCp7I2A9XRRWEk0.&quot;">
+    <id>tag:youtube.com,2008:video:Bw6lq_4DRNs</id>
+    <published>2011-05-15T08:23:58.000Z</published>
+    <updated>2015-03-01T11:27:26.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Film" label="Film &amp; Animation"/>
+    <title>Teapot Matchmoving Test</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/Bw6lq_4DRNs?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=Bw6lq_4DRNs&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/Bw6lq_4DRNs/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=Bw6lq_4DRNs"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/Bw6lq_4DRNs?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/Bw6lq_4DRNs/comments?v=2" countHint="3"/>
+    </gd:comments>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Film &amp; Animation" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Film</media:category>
+      <media:content url="http://www.youtube.com/v/Bw6lq_4DRNs?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="4" yt:format="5"/>
+      <media:content url="rtsp://r7---sn-4g57kuez.c.youtube.com/CigLENy73wIaHwnbRAP-q6UOBxMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="4" yt:format="1"/>
+      <media:content url="rtsp://r7---sn-4g57kuez.c.youtube.com/CigLENy73wIaHwnbRAP-q6UOBxMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="4" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Just a little test with my iphone, boujou, vray, after effects and 3ds max ;D.</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=Bw6lq_4DRNs&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/default.jpg" height="90" width="120" time="00:00:02" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/1.jpg" height="90" width="120" time="00:00:01" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/2.jpg" height="90" width="120" time="00:00:02" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/Bw6lq_4DRNs/3.jpg" height="90" width="120" time="00:00:03" yt:name="end"/>
+      <media:title type="plain">Teapot Matchmoving Test</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="4"/>
+      <yt:uploaded>2011-05-15T08:23:58.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>Bw6lq_4DRNs</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="1" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:statistics favoriteCount="0" viewCount="152"/>
+    <yt:rating numDislikes="0" numLikes="1"/>
+  </entry>
+  <entry gd:etag="W/&quot;CUUCRn47eCp7I2A9WhZbGUw.&quot;">
+    <id>tag:youtube.com,2008:video:0kt84eXWW0w</id>
+    <published>2011-03-07T19:02:31.000Z</published>
+    <updated>2011-06-24T11:01:07.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music"/>
+    <title>Happy Birthday by K2r79</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/0kt84eXWW0w?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=0kt84eXWW0w&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/0kt84eXWW0w/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=0kt84eXWW0w"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/0kt84eXWW0w?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/0kt84eXWW0w/comments?v=2" countHint="0"/>
+    </gd:comments>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Music</media:category>
+      <media:content url="http://www.youtube.com/v/0kt84eXWW0w?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="103" yt:format="5"/>
+      <media:content url="rtsp://r3---sn-4g57kuek.c.youtube.com/CigLENy73wIaHwlMW9bl4XxL0hMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="103" yt:format="1"/>
+      <media:content url="rtsp://r3---sn-4g57kuek.c.youtube.com/CigLENy73wIaHwlMW9bl4XxL0hMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="103" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Spécialement pour un très bon ami ;D.</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=0kt84eXWW0w&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/default.jpg" height="90" width="120" time="00:00:51.500" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/1.jpg" height="90" width="120" time="00:00:25.750" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/2.jpg" height="90" width="120" time="00:00:51.500" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/0kt84eXWW0w/3.jpg" height="90" width="120" time="00:01:17.250" yt:name="end"/>
+      <media:title type="plain">Happy Birthday by K2r79</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="103"/>
+      <yt:uploaded>2011-03-07T19:02:31.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>0kt84eXWW0w</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="1" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:statistics favoriteCount="0" viewCount="150"/>
+    <yt:rating numDislikes="0" numLikes="1"/>
+  </entry>
+  <entry gd:etag="W/&quot;CUYHRH47eCp7I2A9XRRVFU0.&quot;">
+    <id>tag:youtube.com,2008:video:tKofAGoinMg</id>
+    <published>2011-01-09T17:49:41.000Z</published>
+    <updated>2015-03-16T10:52:15.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music"/>
+    <title>The K's : Father and Son...</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/tKofAGoinMg?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=tKofAGoinMg&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/tKofAGoinMg/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=tKofAGoinMg"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/tKofAGoinMg?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/tKofAGoinMg/comments?v=2" countHint="0"/>
+    </gd:comments>
+    <yt:hd/>
+    <yt:location>Loulay</yt:location>
+    <media:group>
+      <media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Music</media:category>
+      <media:content url="http://www.youtube.com/v/tKofAGoinMg?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="755" yt:format="5"/>
+      <media:content url="rtsp://r8---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwnInCJqAB-qtBMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="755" yt:format="1"/>
+      <media:content url="rtsp://r8---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwnInCJqAB-qtBMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="755" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Samples from our first concert in "The Mouton Noir" bar in Loulay ! Sorry for the bug between "Wonderful tonight" and "Imagine" :/</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=tKofAGoinMg&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/default.jpg" height="90" width="120" time="00:06:17.500" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/1.jpg" height="90" width="120" time="00:03:08.750" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/2.jpg" height="90" width="120" time="00:06:17.500" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/tKofAGoinMg/3.jpg" height="90" width="120" time="00:09:26.250" yt:name="end"/>
+      <media:title type="plain">The K's : Father and Son...</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="755"/>
+      <yt:uploaded>2011-01-09T17:49:41.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>tKofAGoinMg</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="3" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:recorded>2010-12-18</yt:recorded>
+    <yt:statistics favoriteCount="0" viewCount="363"/>
+    <yt:rating numDislikes="0" numLikes="3"/>
+  </entry>
+  <entry gd:etag="W/&quot;Dk4NSX47eCp7I2A9Wh5WGU0.&quot;">
+    <id>tag:youtube.com,2008:video:acVcgKjIp90</id>
+    <published>2010-11-11T11:27:03.000Z</published>
+    <updated>2013-12-01T13:36:38.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music"/>
+    <title>Repetition de l'orchestre avec la collaboration du conservatoire de Brive</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/acVcgKjIp90?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=acVcgKjIp90&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/acVcgKjIp90/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=acVcgKjIp90"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/acVcgKjIp90?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/acVcgKjIp90/comments?v=2" countHint="0"/>
+    </gd:comments>
+    <yt:hd/>
+    <media:group>
+      <media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Music</media:category>
+      <media:content url="http://www.youtube.com/v/acVcgKjIp90?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="139" yt:format="5"/>
+      <media:content url="rtsp://r7---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwndp8iogFzFaRMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="139" yt:format="1"/>
+      <media:content url="rtsp://r7---sn-4g57kuee.c.youtube.com/CigLENy73wIaHwndp8iogFzFaRMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="139" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Répetition du vendredi 5 novembre :D.</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=acVcgKjIp90&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/default.jpg" height="90" width="120" time="00:01:09.500" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/sddefault.jpg" height="480" width="640" yt:name="sddefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/1.jpg" height="90" width="120" time="00:00:34.750" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/2.jpg" height="90" width="120" time="00:01:09.500" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/acVcgKjIp90/3.jpg" height="90" width="120" time="00:01:44.250" yt:name="end"/>
+      <media:title type="plain">Repetition de l'orchestre avec la collaboration du conservatoire de Brive</media:title>
+      <yt:aspectRatio>widescreen</yt:aspectRatio>
+      <yt:duration seconds="139"/>
+      <yt:uploaded>2010-11-11T11:27:03.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>acVcgKjIp90</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="1" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:statistics favoriteCount="0" viewCount="253"/>
+    <yt:rating numDislikes="0" numLikes="1"/>
+  </entry>
+  <entry gd:etag="W/&quot;A0UARH47eCp7I2A9XRRWEk0.&quot;">
+    <id>tag:youtube.com,2008:video:GefqjV9VNzI</id>
+    <published>2010-04-15T14:40:22.000Z</published>
+    <updated>2015-03-01T11:27:25.000Z</updated>
+    <category scheme="http://schemas.google.com/g/2005#kind" term="http://gdata.youtube.com/schemas/2007#video"/>
+    <category scheme="http://gdata.youtube.com/schemas/2007/categories.cat" term="Music" label="Music"/>
+    <title>Fine day - Fete du lycée Desfontaines 2010 à Melle</title>
+    <content type="application/x-shockwave-flash" src="http://www.youtube.com/v/GefqjV9VNzI?version=3&amp;f=user_uploads&amp;app=youtube_gdata"/>
+    <link rel="alternate" type="text/html" href="http://www.youtube.com/watch?v=GefqjV9VNzI&amp;feature=youtube_gdata"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#video.related" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/videos/GefqjV9VNzI/related?v=2"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#mobile" type="text/html" href="http://m.youtube.com/details?v=GefqjV9VNzI"/>
+    <link rel="http://gdata.youtube.com/schemas/2007#uploader" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/Q8RpCPVM0ZTs-cSjehIBlg?v=2"/>
+    <link rel="self" type="application/atom+xml" href="http://gdata.youtube.com/feeds/api/users/k2r79/uploads/GefqjV9VNzI?v=2"/>
+    <author>
+      <name>Vincent Kelleher</name>
+      <uri>http://gdata.youtube.com/feeds/api/users/k2r79</uri>
+      <yt:userId>Q8RpCPVM0ZTs-cSjehIBlg</yt:userId>
+    </author>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="commentVote" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <yt:accessControl action="rate" permission="allowed"/>
+    <yt:accessControl action="embed" permission="allowed"/>
+    <yt:accessControl action="list" permission="allowed"/>
+    <yt:accessControl action="autoPlay" permission="allowed"/>
+    <yt:accessControl action="syndicate" permission="allowed"/>
+    <gd:comments>
+      <gd:feedLink rel="http://gdata.youtube.com/schemas/2007#comments" href="http://gdata.youtube.com/feeds/api/videos/GefqjV9VNzI/comments?v=2" countHint="0"/>
+    </gd:comments>
+    <media:group>
+      <media:category label="Music" scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Music</media:category>
+      <media:content url="http://www.youtube.com/v/GefqjV9VNzI?version=3&amp;f=user_uploads&amp;app=youtube_gdata" type="application/x-shockwave-flash" medium="video" isDefault="true" expression="full" duration="303" yt:format="5"/>
+      <media:content url="rtsp://r2---sn-4g57kued.c.youtube.com/CigLENy73wIaHwkyN1VfjernGRMYDSANFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="303" yt:format="1"/>
+      <media:content url="rtsp://r2---sn-4g57kued.c.youtube.com/CigLENy73wIaHwkyN1VfjernGRMYESARFEgGUgx1c2VyX3VwbG9hZHMM/0/0/0/video.3gp" type="video/3gpp" medium="video" expression="full" duration="303" yt:format="6"/>
+      <media:credit role="uploader" scheme="urn:youtube" yt:display="Vincent Kelleher">k2r79</media:credit>
+      <media:description type="plain">Enregistré par ma maman au premier rang :D.</media:description>
+      <media:keywords/>
+      <media:license type="text/html" href="http://www.youtube.com/t/terms">youtube</media:license>
+      <media:player url="http://www.youtube.com/watch?v=GefqjV9VNzI&amp;feature=youtube_gdata_player"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/GefqjV9VNzI/default.jpg" height="90" width="120" time="00:02:31.500" yt:name="default"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/GefqjV9VNzI/mqdefault.jpg" height="180" width="320" yt:name="mqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/GefqjV9VNzI/hqdefault.jpg" height="360" width="480" yt:name="hqdefault"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/GefqjV9VNzI/1.jpg" height="90" width="120" time="00:01:15.750" yt:name="start"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/GefqjV9VNzI/2.jpg" height="90" width="120" time="00:02:31.500" yt:name="middle"/>
+      <media:thumbnail url="http://i.ytimg.com/vi/GefqjV9VNzI/3.jpg" height="90" width="120" time="00:03:47.250" yt:name="end"/>
+      <media:title type="plain">Fine day - Fete du lycée Desfontaines 2010 à Melle</media:title>
+      <yt:duration seconds="303"/>
+      <yt:uploaded>2010-04-15T14:40:22.000Z</yt:uploaded>
+      <yt:uploaderId>UCQ8RpCPVM0ZTs-cSjehIBlg</yt:uploaderId>
+      <yt:videoid>GefqjV9VNzI</yt:videoid>
+    </media:group>
+    <gd:rating average="5.0" max="5" min="1" numRaters="2" rel="http://schemas.google.com/g/2005#overall"/>
+    <yt:statistics favoriteCount="0" viewCount="448"/>
+    <yt:rating numDislikes="0" numLikes="2"/>
+  </entry>
+</feed>
