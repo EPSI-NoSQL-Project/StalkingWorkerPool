@@ -10,10 +10,10 @@ class InitWorker < Worker
   def job
     # Create the base empty person
     @person = @arangodb['people'].create_document({
-      name: @person['name'],
-      location: @person['location'],
-      data: {}
-    })
+                                                      name: @person['name'],
+                                                      location: @person['location'],
+                                                      data: {}
+                                                  })
 
     # @elasticsearch.index index: 'people', type: 'person', id: @person.key,
     #   body: {

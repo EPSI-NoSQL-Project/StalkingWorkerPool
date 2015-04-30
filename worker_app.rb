@@ -2,6 +2,7 @@ require './workers/init_worker'
 require './workers/google_crawler_worker'
 require './workers/enjoygram_crawler_worker'
 require './workers/twitter_crawler_worker'
+require './workers/facebook_crawler_worker'
 require 'ashikawa-core'
 require 'yell'
 require 'redis'
@@ -45,14 +46,15 @@ worker_pool = Thread.new do
       end
 
       ##### TWITTER CRAWLER ######
+      Thread.new do
+        twitter_crawler = TwitterCrawlerWorker.new(arangodb, person)
+        twitter_crawler.run
+      end
+
+      ##### FACEBOOK CRAWLER ######
       # Thread.new do
-      #   twitter_crawler = TwitterCrawlerWorker.new(arangodb, person)
-      #   twitter_crawler.run
-      # end
-      #
-      # Thread.new do
-        facebook_crawler = FacebookCrawlerWorker.new(arangodb, person)
-        facebook_crawler.run
+      #   facebook_crawler = FacebookCrawlerWorker.new(arangodb, person)
+      #   facebook_crawler.run
       # end
 
       ##### ENJOYGRAM CRAWLER ######
