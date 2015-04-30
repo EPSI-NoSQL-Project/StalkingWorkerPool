@@ -8,12 +8,11 @@ class YoutubeCrawlerWorker < Worker
     super(database, person)
 
     @name = 'Youtube Crawler Worker'
+    @data_name = 'youtube_crawler'
   end
 
   def job
-    @data['youtube_crawler'] = []
-
-    youtube_uri = 'http://gdata.youtube.com/feeds/api/users/' + @person['name'] + '/uploads?v=2&format=5'
+    youtube_uri = 'http://gdata.youtube.com/feeds/api/users/' + @person['name'].gsub(' ', '+') + '/uploads?v=2&format=5'
     youtube_data = Nokogiri::XML(open(youtube_uri)) 
 
     youtube_data.search('entry').each do |entry|
@@ -25,7 +24,7 @@ class YoutubeCrawlerWorker < Worker
         numLikes = entry.at('.//yt:rating').attribute('numLikes')
       end
 
-      @data['youtube_crawler'].push({
+      @data.push({
         'author' => entry.at('author').at('name').text,
         'pseudo' => entry.at('.//media:credit').text,
         'user_id' => entry.at('author').at('.//yt:userId').text,

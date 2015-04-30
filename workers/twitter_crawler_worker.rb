@@ -35,7 +35,7 @@ class TwitterCrawlerWorker < Worker
     }
 
     #crawl user profil
-    twitter_search_profile = access_token.request(:get, URI.escape('https://api.twitter.com/1.1/users/search.json?q=' + @person['name']))
+    twitter_search_profile = access_token.request(:get, URI.escape('https://api.twitter.com/1.1/users/search.json?q=' + @person['name'].gsub(' ', '+')))
     twitter_user_profile = JSON.parse(twitter_search_profile.body)
 
     twitter_user_profile.each do |user|
@@ -49,7 +49,7 @@ class TwitterCrawlerWorker < Worker
     end
 
     #crawl friendlist user profil
-    twitter_search_friendlist = access_token.request(:get, URI.escape('https://api.twitter.com/1.1/friends/list.json?screen_name=' + @person['name'] + '&include_user_entities=false&skip_status=true&cursor=-50&count=200'))
+    twitter_search_friendlist = access_token.request(:get, URI.escape('https://api.twitter.com/1.1/friends/list.json?screen_name=' + @person['name'].gsub(' ', '+') + '&include_user_entities=false&skip_status=true&cursor=-50&count=200'))
     twitter_user_profile_friendlist = JSON.parse(twitter_search_friendlist.body)
 
     twitter_user_profile_friendlist['users'].each do |friend|
@@ -65,7 +65,7 @@ class TwitterCrawlerWorker < Worker
 
 
     #crawl status user profil
-    twitter_search_status = access_token.request(:get, URI.escape('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' + @person['name'] +'&include_user_entities=false&skip_status=true&count=200'))
+    twitter_search_status = access_token.request(:get, URI.escape('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' + @person['name'].gsub(' ', '+') +'&include_user_entities=false&skip_status=true&count=200'))
     twitter_user_profile_status = JSON.parse(twitter_search_status.body)
 
     twitter_user_profile_status.each do |status|

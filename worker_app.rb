@@ -35,8 +35,6 @@ worker_pool = Thread.new do
       init_worker = InitWorker.new(arangodb, person)
       init_worker.run
 
-youtube_crawler_worker = YoutubeCrawlerWorker.new(arangodb, person)
-youtube_crawler_worker.run
       # Set the ArangoDB document key
       person['key'] = init_worker.person.key
 
@@ -49,15 +47,21 @@ youtube_crawler_worker.run
       end
 
       ##### TWITTER CRAWLER ######
-      Thread.new do
+      twitter_crawler_thread = Thread.new do
         twitter_crawler = TwitterCrawlerWorker.new(arangodb, person)
         twitter_crawler.run
       end
 
       ##### FACEBOOK CRAWLER ######
-      # Thread.new do
+      # facebook_crawler_thread = Thread.new do
       #   facebook_crawler = FacebookCrawlerWorker.new(arangodb, person)
       #   facebook_crawler.run
+      # end
+
+      ##### YOUTUBE CRAWLER ######
+      # youtube_worker_thread = Thread.new do
+      #   youtube_worker = YoutubeCrawlerWorker.new(arangodb, person)
+      #   youtube_worker.run
       # end
 
       ##### ENJOYGRAM CRAWLER ######
@@ -68,6 +72,9 @@ youtube_crawler_worker.run
 
       # Wait for crawlers
       google_crawler_thread.join
+      twitter_crawler_thread.join
+      # facebook_crawler_thread.join
+      youtube_worker_thread.join
       enjoygram_crawler_thread.join
 
       # Add the tags to ElasticSearch
