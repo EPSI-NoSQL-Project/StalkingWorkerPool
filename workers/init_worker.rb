@@ -1,8 +1,8 @@
 require './workers/worker'
 
 class InitWorker < Worker
-  def initialize(arangodb, elasticsearch, person)
-    super(arangodb, elasticsearch, person)
+  def initialize(arangodb, person)
+    super(arangodb, person)
 
     @name = 'Initialization Worker'
   end
@@ -15,12 +15,12 @@ class InitWorker < Worker
       data: {}
     })
 
-    @elasticsearch.index index: 'people', type: 'person', id: @person.key,
-      body: {
-        name: @person['name'],
-        location: @person['location'],
-        tags: []
-      }
+    # @elasticsearch.index index: 'people', type: 'person', id: @person.key,
+    #   body: {
+    #     name: @person['name'],
+    #     location: @person['location'],
+    #     tags: []
+    #   }
   end
 
   def persist
