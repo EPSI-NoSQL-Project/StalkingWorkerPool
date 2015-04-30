@@ -11,7 +11,6 @@ class Worker
 
   def initialize(arangodb, person)
     @arangodb = arangodb
-    # @elasticsearch = elasticsearch
     @person = person
     @data = []
     @relatives = []

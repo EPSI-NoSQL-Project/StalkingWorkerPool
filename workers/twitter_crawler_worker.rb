@@ -7,10 +7,11 @@ require 'pp'
 
 class TwitterCrawlerWorker < Worker
 
-  def initialize(database, person)
-  super(database, person)
+  def initialize(database,  person)
+    super(database, person)
 
-  @name = 'Twitter Crawler Worker'
+    @name = 'Twitter Crawler Worker'
+    @data_name = 'twitter_crawler'
 
   end
 
@@ -26,8 +27,6 @@ class TwitterCrawlerWorker < Worker
 
   def job
     access_token = prepare_access_token('871418562-LKbfKqXtfE7bVyDGb0tIowKf4nV4WnLeYCBgLSav','1kFqyPSF5FKIN2ITBxUHNpdKaw5C59LWD2C3OXf1uaL35')
-
-    @data['twitter_crawler'] = []
 
     twitter_profile = {
       users: [],
@@ -81,7 +80,7 @@ class TwitterCrawlerWorker < Worker
     twitter_profile[:status].push(twitter_status)
     end
 
-    @data['twitter_crawler'].push(twitter_profile)
+    @data.push(twitter_profile)
 
     end
 end

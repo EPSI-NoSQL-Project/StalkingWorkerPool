@@ -30,7 +30,7 @@ worker_pool = Thread.new do
       person = JSON.parse(person)
 
       # Run the initialization worker
-      init_worker = InitWorker.new(arangodb, elasticsearch, person)
+      init_worker = InitWorker.new(arangodb, person)
       init_worker.run
 
       # Set the ArangoDB document key
@@ -40,18 +40,9 @@ worker_pool = Thread.new do
 
       ##### GOOGLE CRAWLER ######
       google_crawler_thread = Thread.new do
-        google_crawler_worker = GoogleCrawlerWorker.new(arangodb, elasticsearch, person)
+        google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
         google_crawler_worker.run
-      # Thread.new do
-      #   google_crawler_worker = GoogleCrawlerWorker.new(arangodb, person)
-      #   google_crawler_worker.run
-      # end
-      # #
-      # # ##### ENJOYGRAM CRAWLER ######
-      # Thread.new do
-      #   enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
-      #   enjoygram_worker.run
-      # end
+      end
 
       ##### TWITTER CRAWLER ######
       Thread.new do
@@ -61,7 +52,7 @@ worker_pool = Thread.new do
 
       ##### ENJOYGRAM CRAWLER ######
       enjoygram_crawler_thread = Thread.new do
-        enjoygram_worker = EnjoyGramWorker.new(arangodb, elasticsearch, person)
+        enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
         enjoygram_worker.run
       end
 
