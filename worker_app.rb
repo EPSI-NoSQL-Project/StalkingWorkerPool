@@ -14,7 +14,7 @@ arangodb = Ashikawa::Core::Database.new do |config|
   config.logger = logger
 end
 
-person = {'name' => 'k2r79'}
+person = {'name' => 'Vincent Kelleher'}
 
 # Run the initialization worker
 init_worker = InitWorker.new(arangodb, person)
