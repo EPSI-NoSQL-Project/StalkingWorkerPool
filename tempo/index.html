@@ -29,13 +29,54 @@
 			return xmlHttp.responseText;
 		}
 
-		function showMyVideos(data) 
+		function findUser(data)
 		{
 			var feed = data.feed;
 			var entries = feed.entry || [];
 
+			var usersList = [];
+			// Commence à 1 pour éviter YouTube Help
+			for (var i = 1; i < entries.length; i++) 
+			{
+				var entry = entries[i];
+				var authorName = entry.author[0].name.$t;
+
+				usersList[authorName] = entry;
+			}
+
 			var html = ['<ul>'];
-			for (var i = 0; i < entries.length; i++) 
+			for (var userKey in usersList) 
+			{
+				var entry = usersList[userKey];
+				
+				// Author and pseudo (uri)
+				var author = entry.author;
+				var authorName = author[0].name.$t;
+				var uri = author[0].uri.$t;
+
+				// videos
+				var videosTxt = getUserVideos(uri);
+
+				var sum = "================= "+authorName;
+				sum += " : "+uri;
+				sum += "<br/>"+videosTxt;
+
+				html.push('<li>', sum, '</li>');
+			}
+			html.push('</ul>');
+			document.getElementById('videos').innerHTML = html.join('');;
+		}
+
+		function getUserVideos(userURI)
+		{
+			var videosTxt = "";
+			
+			var data = JSON.parse(httpGet(userURI+"/uploads?v=2&alt=json&format=5"));
+			var feed = data.feed;
+			var entries = feed.entry || [];
+
+			// Commence à 1 pour éviter YouTube Help
+			for (var i = 1; i < entries.length; i++) 
 			{
 				var entry = entries[i];
 				var title = entry.title.$t;
@@ -64,58 +105,30 @@
 				{
 					youtubeDateRecorded = entry.yt$recorded.$t;
 				}
-				var favoriteCount = entry.yt$statistics.favoriteCount;
-				var viewCount = entry.yt$statistics.viewCount;
+				var favoriteCount = 0;
+				var viewCount = 0;
+				if(entry.yt$statistics != undefined)
+				{
+					favoriteCount = entry.yt$statistics.favoriteCount;
+					viewCount = entry.yt$statistics.viewCount;
+				}
 
-				var sum = title + " (" + author + ") <br/>";
-				sum += mediaDescription + "<br/>";
-				sum += uri + "<br/>";
-				sum += youtubeDateRecorded + "<br/>";
-				sum += favoriteCount + " " + viewCount + "<br/>";
-				sum += categoryLabel + " - " + categoryTerm + "<br/>";
-				sum += gmlPosition + "<br/>";
-				sum += uriYoutube0 + "<br/>";
-				sum += uriYoutube1 + "<br/>";
-				sum += uriYoutube2 + "<br/>";
-				sum += uriYoutube3 + "<br/>";
-				sum += "<br/><br/>";
-
-				html.push('<li>', sum, '</li>');
+				videosTxt += " >>>>>>  "+title;
+				videosTxt += mediaDescription + "<br/>";
+				videosTxt += uri + "<br/>";
+				videosTxt += youtubeDateRecorded + "<br/>";
+				videosTxt += favoriteCount + " " + viewCount + "<br/>";
+				videosTxt += categoryLabel + " - " + categoryTerm + "<br/>";
+				videosTxt += gmlPosition + "<br/>";
+				videosTxt += uriYoutube0 + "<br/>";
+				videosTxt += uriYoutube1 + "<br/>";
+				videosTxt += uriYoutube2 + "<br/>";
+				videosTxt += uriYoutube3 + "<br/>";
+				videosTxt += "<br/><br/>";
 			}
-			html.push('</ul>');
-			document.getElementById('videos').innerHTML = html.join('');
-		} 
 
-		function findUser(data)
-		{
-			var feed = data.feed;
-			var entries = feed.entry || [];
 
-			var html = ['<ul>'];
-			// Commence à 1 pour éviter YouTube Help
-			for (var i = 1; i < entries.length; i++) 
-			{
-				var entry = entries[i];
-				if(i == 1)
-					console.log(entry);
-				// Author and pseudo (uri)
-				var author = entry.author;
-				var authorName = author[0].name.$t;
-				var uri = author[0].uri.$t;
-
-				// videos
-				var videosJSON = JSON.parse(httpGet(uri+"/uploads?v=2&alt=json&format=5"));
-				if(i == 1)
-					console.log(videosJSON);
-				showMyVideos(videosJSON);
-
-				var sum = "================= "+authorName;
-				sum += " : "+uri;
-
-				html.push('<li>', sum, '</li>');
-			}
-			html.push('</ul>');
-			document.getElementById('users').innerHTML = html.join('');;
+			return videosTxt;
 		}
 
 
