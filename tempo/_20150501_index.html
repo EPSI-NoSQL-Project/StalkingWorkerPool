@@ -12,25 +12,15 @@
 			<h1></h1>
 		</div>
 
-		<div id="users">
-		</div>
-
 		<div id="videos">
+
 		</div>
 
-	<script type="text/javascript">
-		function httpGet(theUrl)
-		{
-			var xmlHttp = null;
+	<script type="text/javascript" >
+		function showMyVideos(data) {
 
-			xmlHttp = new XMLHttpRequest();
-			xmlHttp.open( "GET", theUrl, false );
-			xmlHttp.send( null );
-			return xmlHttp.responseText;
-		}
+			console.log(data);
 
-		function showMyVideos(data) 
-		{
 			var feed = data.feed;
 			var entries = feed.entry || [];
 
@@ -58,6 +48,7 @@
 				var uriYoutube3 = entry.link[3].href;
 
 				var mediaDescription = entry.media$group.media$description.$t;
+				var mediaDuration = entry.media$group.media$content[0].duration;
 
 				var youtubeDateRecorded = "YYYY-MM-DD"
 				if(entry.yt$recorded != undefined)
@@ -68,7 +59,8 @@
 				var viewCount = entry.yt$statistics.viewCount;
 
 				var sum = title + " (" + author + ") <br/>";
-				sum += mediaDescription + "<br/>";
+				sum += mediaDescription + " <br/>" 
+				sum += mediaDuration + " sec  <br/>";
 				sum += uri + "<br/>";
 				sum += youtubeDateRecorded + "<br/>";
 				sum += favoriteCount + " " + viewCount + "<br/>";
@@ -85,44 +77,10 @@
 			html.push('</ul>');
 			document.getElementById('videos').innerHTML = html.join('');
 		} 
-
-		function findUser(data)
-		{
-			var feed = data.feed;
-			var entries = feed.entry || [];
-
-			var html = ['<ul>'];
-			// Commence à 1 pour éviter YouTube Help
-			for (var i = 1; i < entries.length; i++) 
-			{
-				var entry = entries[i];
-				if(i == 1)
-					console.log(entry);
-				// Author and pseudo (uri)
-				var author = entry.author;
-				var authorName = author[0].name.$t;
-				var uri = author[0].uri.$t;
-
-				// videos
-				var videosJSON = JSON.parse(httpGet(uri+"/uploads?v=2&alt=json&format=5"));
-				if(i == 1)
-					console.log(videosJSON);
-				showMyVideos(videosJSON);
-
-				var sum = "================= "+authorName;
-				sum += " : "+uri;
-
-				html.push('<li>', sum, '</li>');
-			}
-			html.push('</ul>');
-			document.getElementById('users').innerHTML = html.join('');;
-		}
-
-
 	</script>
 
-	<script type="text/javascript"
-	src="https://gdata.youtube.com/feeds/api/videos?q=%22vincent+kelleher%22&alt=json&callback=findUser" >
+	<script type="text/javascript" 
+	src="http://gdata.youtube.com/feeds/api/users/k2r79/uploads?v=2&alt=json-in-script&format=5&callback=showMyVideos">
 	</script>
 </body>
 </html>
