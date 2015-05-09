@@ -18,8 +18,6 @@ class YoutubeCrawlerWorker < Worker
     userToFind = cleanSpaceChar(@person['name'])
     usersURI = findUserURIList(userToFind)
     # Find videos list from the URI
-    # We only keep the video if the author has got the same name as the input one
-    # Note : avoiding keeping YouTube Help
 	findUserVideo(usersURI)
   end
 
@@ -47,6 +45,7 @@ class YoutubeCrawlerWorker < Worker
 	    youtube_data.search('entry').each do |entry|
 	    	videoAuthor = entry.at('author').at('name').text
 
+	    	# We only keep the video if the author has got the same name as the input one
 	    	if @person['name'].upcase == videoAuthor.upcase
 	    		puts videoAuthor.upcase+ " = " +entry.at('title').text
 
@@ -60,8 +59,8 @@ class YoutubeCrawlerWorker < Worker
   	numDislikes = 0
 	numLikes = 0
 	if ( entry.at('.//yt:rating') )
-	numDislikes = entry.at('.//yt:rating').attribute('numDislikes')
-	numLikes = entry.at('.//yt:rating').attribute('numLikes')
+		numDislikes = entry.at('.//yt:rating').attribute('numDislikes')
+		numLikes = entry.at('.//yt:rating').attribute('numLikes')
 	end
 
 	viewCount = 0
