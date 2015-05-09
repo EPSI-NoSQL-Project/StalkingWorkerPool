@@ -1,0 +1,56 @@
+kimsavinfo:StalkingWorkerPool kimsavinfo$ ruby worker_app.rb
+Running : Initialization Worker...
+2015-05-09T18:09:19+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/collection/people
+2015-05-09T18:09:19+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/collection/people 200
+2015-05-09T18:09:19+02:00 [DEBUG] 3268 : request POST http://localhost:8529/_db/_system/_api/document?collection=8634913751
+2015-05-09T18:09:19+02:00 [DEBUG] 3268 : response POST http://localhost:8529/_db/_system/_api/document?collection=8634913751 202
+Finished : Initialization Worker.
+Running : Google Crawler Worker...
+Running : Twitter Crawler Worker...
+Running : Enjoygram Crawler Worker...
+2015-05-09T18:09:55+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/collection/people
+2015-05-09T18:09:55+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/collection/people 200
+2015-05-09T18:09:55+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/document/8634913751/9530004439
+2015-05-09T18:09:55+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/document/8634913751/9530004439 200
+2015-05-09T18:09:55+02:00 [DEBUG] 3268 : request PUT http://localhost:8529/_db/_system/_api/document/people/9530004439
+2015-05-09T18:09:55+02:00 [DEBUG] 3268 : response PUT http://localhost:8529/_db/_system/_api/document/people/9530004439 202
+Finished : Twitter Crawler Worker.
+2015-05-09T18:10:05+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/collection/people
+2015-05-09T18:10:05+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/collection/people 200
+2015-05-09T18:10:05+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/document/8634913751/9530004439
+2015-05-09T18:10:05+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/document/8634913751/9530004439 200
+2015-05-09T18:10:05+02:00 [DEBUG] 3268 : request PUT http://localhost:8529/_db/_system/_api/document/people/9530004439
+2015-05-09T18:10:05+02:00 [DEBUG] 3268 : response PUT http://localhost:8529/_db/_system/_api/document/people/9530004439 202
+Finished : Google Crawler Worker.
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/collection/people
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/collection/people 200
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/document/8634913751/9530004439
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/document/8634913751/9530004439 200
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request PUT http://localhost:8529/_db/_system/_api/document/people/9530004439
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response PUT http://localhost:8529/_db/_system/_api/document/people/9530004439 202
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/collection/people
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/collection/people 200
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request POST http://localhost:8529/_db/_system/_api/document?collection=8634913751
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response POST http://localhost:8529/_db/_system/_api/document?collection=8634913751 202
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/gharial/relatives
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/gharial/relatives 200
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : request GET http://localhost:8529/_db/_system/_api/collection/relations
+2015-05-09T18:10:09+02:00 [DEBUG] 3268 : response GET http://localhost:8529/_db/_system/_api/collection/relations 404
+/Library/Ruby/Gems/2.0.0/gems/ashikawa-core-0.14.0/lib/ashikawa-core/error_response.rb:102:in `resource_not_found': You requested a collection from the server that does not exist (Ashikawa::Core::CollectionNotFoundException)
+	from /Library/Ruby/Gems/2.0.0/gems/ashikawa-core-0.14.0/lib/ashikawa-core/error_response.rb:52:in `on_complete'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday-0.9.1/lib/faraday/response.rb:9:in `block in call'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday-0.9.1/lib/faraday/response.rb:57:in `on_complete'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday-0.9.1/lib/faraday/response.rb:8:in `call'
+	from /Library/Ruby/Gems/2.0.0/gems/ashikawa-core-0.14.0/lib/ashikawa-core/x_arango_version.rb:20:in `call'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday_middleware-0.9.1/lib/faraday_middleware/request/encode_json.rb:23:in `call'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday-0.9.1/lib/faraday/rack_builder.rb:139:in `build_response'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday-0.9.1/lib/faraday/connection.rb:377:in `run_request'
+	from /Library/Ruby/Gems/2.0.0/gems/faraday-0.9.1/lib/faraday/connection.rb:140:in `get'
+	from /Library/Ruby/Gems/2.0.0/gems/ashikawa-core-0.14.0/lib/ashikawa-core/connection.rb:103:in `public_send'
+	from /Library/Ruby/Gems/2.0.0/gems/ashikawa-core-0.14.0/lib/ashikawa-core/connection.rb:103:in `send_request'
+	from /Library/Ruby/Gems/2.0.0/gems/ashikawa-core-0.14.0/lib/ashikawa-core/graph.rb:222:in `edge_collection'
+	from /Users/kimsavinfo/Dropbox/epsi/I4/no_sql/projet/StalkingWorkerPool/workers/worker.rb:46:in `block in persist'
+	from /Users/kimsavinfo/Dropbox/epsi/I4/no_sql/projet/StalkingWorkerPool/workers/worker.rb:43:in `each'
+	from /Users/kimsavinfo/Dropbox/epsi/I4/no_sql/projet/StalkingWorkerPool/workers/worker.rb:43:in `persist'
+	from /Users/kimsavinfo/Dropbox/epsi/I4/no_sql/projet/StalkingWorkerPool/workers/worker.rb:23:in `run'
+	from worker_app.rb:70:in `block (2 levels) in <main>'

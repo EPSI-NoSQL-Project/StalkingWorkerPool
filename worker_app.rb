@@ -65,17 +65,17 @@ worker_pool = Thread.new do
       # end
 
       ##### ENJOYGRAM CRAWLER ######
-      enjoygram_crawler_thread = Thread.new do
-        enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
-        enjoygram_worker.run
-      end
+      # enjoygram_crawler_thread = Thread.new do
+      #   enjoygram_worker = EnjoyGramWorker.new(arangodb, person)
+      #   enjoygram_worker.run
+      # end
 
       # Wait for crawlers
       google_crawler_thread.join
       twitter_crawler_thread.join
       # facebook_crawler_thread.join
       # youtube_worker_thread.join
-      enjoygram_crawler_thread.join
+      # enjoygram_crawler_thread.join
 
       # Add the tags to ElasticSearch
       keywords = arangodb.query.execute('
