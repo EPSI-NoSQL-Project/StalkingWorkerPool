@@ -123,11 +123,11 @@ worker_pool = Thread.new do
         }
       end
 
-      elasticsearch.update index: 'people', type: 'person', id: person['key'],
+      elasticsearch.create index: 'people', type: 'person', id: person['key'],
        body: {
-           doc: {
-               tags: tags
-           }
+         name: person['name'],
+         location: person['location'],
+         tags: tags
        }
 
       puts 'Finished stalking ' + person['name'] + ' in ' + person['location'] + '.'
