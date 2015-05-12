@@ -59,10 +59,10 @@ worker_pool = Thread.new do
       # end
 
       ##### YOUTUBE CRAWLER ######
-      # youtube_worker_thread = Thread.new do
-      #   youtube_worker = YoutubeCrawlerWorker.new(arangodb, person)
-      #   youtube_worker.run
-      # end
+      youtube_worker_thread = Thread.new do
+        youtube_worker = YoutubeCrawlerWorker.new(arangodb, person)
+        youtube_worker.run
+      end
 
       ##### ENJOYGRAM CRAWLER ######
       enjoygram_crawler_thread = Thread.new do
@@ -84,23 +84,33 @@ worker_pool = Thread.new do
         LET keywords = (
             FOR person in people
             FILTER person._key == @person_key
-            LET google_data = APPEND(
-                    SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].title), special_chars, ""), " "),
-                    APPEND(
-                        SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].subtitle), special_chars, ""), " "),
-                        SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].description), special_chars, ""), " ")
-                    )
-                )
-            LET enjoygram_data = APPEND(
-                    SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].bio), special_chars, ""), " "),
-                    APPEND(
-                        SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].images[*].description), special_chars, ""), " "),
-                        SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].images[*].comments[*].comment), special_chars, ""), " ")
-                    )
-                )
 
-            RETURN APPEND(google_data, enjoygram_data)
+            LET google_data = APPEND(
+              SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].title), special_chars, ""), " "),
+              APPEND(
+                SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].subtitle), special_chars, ""), " "),
+                SPLIT(SUBSTITUTE(TRIM(person.data.google_crawler[*].description), special_chars, ""), " ")
+              )
             )
+
+            LET enjoygram_data = APPEND(
+              SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].bio), special_chars, ""), " "),
+              APPEND(
+                SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].images[*].description), special_chars, ""), " "),
+                SPLIT(SUBSTITUTE(TRIM(person.data.enjoygram_crawler[*].images[*].comments[*].comment), special_chars, ""), " ")
+              )
+            )
+
+            LET twitter_data = APPEND(
+              SPLIT(SUBSTITUTE(TRIM(person.data.twitter_crawler[*].users[*].description), special_chars, ""), " "),
+              SPLIT(SUBSTITUTE(TRIM(person.data.twitter_crawler[*].status[*].contenu_status), special_chars, ""), " ")
+            )
+
+            RETURN APPEND(
+              twitter_data,
+              APPEND(google_data, enjoygram_data)
+            )
+        )
 
         FOR keyword IN keywords[0]
         COLLECT tmp_keyword = keyword INTO collected_keyword
