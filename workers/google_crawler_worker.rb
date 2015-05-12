@@ -2,6 +2,7 @@ require './workers/worker'
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
+require "i18n"
 
 class GoogleCrawlerWorker < Worker
   def initialize(arangodb, person)
