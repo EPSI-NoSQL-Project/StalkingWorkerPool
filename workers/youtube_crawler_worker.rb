@@ -24,6 +24,7 @@ class YoutubeCrawlerWorker < Worker
   def findUserURIList(userToFind)
 	usersURI = {}
 
+    # https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=Vincent+Kelleher&type=video&videoDefinition=high&key=AIzaSyDeLLInjziwLJiJdWpMWHm_uYjSlKcWARg
     youtubeUsers_uri = 'https://gdata.youtube.com/feeds/api/videos?q=%22'+ userToFind +'%22'
 	puts 'URI : '+youtubeUsers_uri
 
