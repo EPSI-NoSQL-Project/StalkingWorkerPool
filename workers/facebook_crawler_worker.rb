@@ -1,9 +1,6 @@
 require './workers/worker'
 require 'rubygems'
-require 'pp'
-require 'fb_graph'
 require 'koala'
-require 'pp'
 
 class FacebookCrawlerWorker < Worker
 
