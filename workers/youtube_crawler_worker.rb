@@ -8,12 +8,11 @@ class YoutubeCrawlerWorker < Worker
     super(database, person)
 
     @name = 'Youtube Crawler Worker'
+    @data_name = 'youtube_crawler'
   end
 
 
   def job
-    @data['youtube_crawler'] = []
-
     # Get 'userPseudo' => 'uri'
     userToFind = cleanSpaceChar(@person['name'])
     usersURI = findUserURIList(userToFind)
@@ -70,7 +69,7 @@ class YoutubeCrawlerWorker < Worker
 		favoriteCount = entry.at('.//yt:statistics').attribute('favoriteCount')
 	end
 
-	@data['youtube_crawler'].push({
+	@data.push({
 		'author' => entry.at('author').at('name').text,
 		'pseudo' => entry.at('.//media:credit').text,
 		'user_id' => entry.at('author').at('.//yt:userId').text,

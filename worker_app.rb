@@ -74,7 +74,7 @@ worker_pool = Thread.new do
       google_crawler_thread.join
       twitter_crawler_thread.join
       # facebook_crawler_thread.join
-      # youtube_worker_thread.join
+      youtube_worker_thread.join
       enjoygram_crawler_thread.join
 
       # Add the tags to ElasticSearch

@@ -19,10 +19,10 @@ class GoogleCrawlerWorker < Worker
 
       results.xpath('.//ol/li').each do |search_entry|
         @data.push({
-                       title: search_entry.xpath('.//h3[@class="r"]/a').text,
-                       subtitle: search_entry.xpath('.//div[@class="f slp"]').text,
-                       description: search_entry.xpath('.//span[@class="st"]').text
-                   })
+             title: search_entry.xpath('.//h3[@class="r"]/a').text,
+             subtitle: search_entry.xpath('.//div[@class="f slp"]').text,
+             description: search_entry.xpath('.//span[@class="st"]').text
+         })
       end
     end
   end
