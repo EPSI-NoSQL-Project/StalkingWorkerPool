@@ -70,6 +70,7 @@ DEPENDENCIES
   bundle
   elasticsearch
   fb_graph
+  i18n (~> 0.7.0)
   koala
   nokogiri
   oauth
