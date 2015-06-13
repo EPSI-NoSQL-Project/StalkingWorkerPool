@@ -53,10 +53,10 @@ worker_pool = Thread.new do
       end
 
       ##### FACEBOOK CRAWLER ######
-      # facebook_crawler_thread = Thread.new do
-      #   facebook_crawler = FacebookCrawlerWorker.new(arangodb, person)
-      #   facebook_crawler.run
-      # end
+      facebook_crawler_thread = Thread.new do
+        facebook_crawler = FacebookCrawlerWorker.new(arangodb, person)
+        facebook_crawler.run
+      end
 
       ##### YOUTUBE CRAWLER ######
       youtube_worker_thread = Thread.new do
@@ -73,7 +73,7 @@ worker_pool = Thread.new do
       # Wait for crawlers
       google_crawler_thread.join
       twitter_crawler_thread.join
-      # facebook_crawler_thread.join
+      facebook_crawler_thread.join
       youtube_worker_thread.join
       enjoygram_crawler_thread.join
 
