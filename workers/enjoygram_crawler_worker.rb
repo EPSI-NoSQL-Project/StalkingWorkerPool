@@ -12,7 +12,7 @@ class EnjoyGramWorker < Worker
   end
 
   def job
-    enjoygram_search = Nokogiri::HTML(open('http://www.enjoygram.com/search/' + @person['name'].gsub(' ', '+')))
+    enjoygram_search = Nokogiri::HTML(open(URI.encode('http://www.enjoygram.com/search/' + @person['name'].gsub(' ', '+'))))
 
     # User search results
     results = enjoygram_search.xpath('.//div[@class="container search-page"]/div[@class="half-side right"]')
@@ -36,34 +36,36 @@ class EnjoyGramWorker < Worker
 
         enjoygram_image_container = enjoygram_image_page.xpath('.//div[@class="media clearfix"]/div[contains(@class, "top")]')
 
-        enjoygram_image = {
-            url: enjoygram_image_container.xpath('.//div[@class="left"]/img').first['src'],
-            description: enjoygram_image_container.xpath('.//div[@class="right"]//p[contains(@class, "desc")]').text,
-            comments: []
-        }
-
-        # Crawl each person that liked the image
-        enjoygram_image_container.xpath('.//div[@class="right"]//div[contains(@class, "likes")]/a').each do |enjoygram_liker|
-          @relatives << {
-              username: enjoygram_liker['href'],
-              image: enjoygram_liker.xpath('.//img').first['src']
-          }
-        end
-
-
-        # Crawl each image's comments
-        enjoygram_image_container.xpath('.//div[@class="right"]//div[@class="comments-wrapper"]/div[@class="comments-box"]/div[@class="comment"]').each do |comment_container|
-          enjoygram_comment = {
-              username: comment_container.xpath('.//div[@class="comment-content"]/a').text,
-              comment: comment_container.xpath('.//div[@class="comment-content"]/span[contains(@class, "text")]').text
+        if enjoygram_image_container.xpath('.//div[@class="left"]/img').length == 1
+          enjoygram_image = {
+              url: enjoygram_image_container.xpath('.//div[@class="left"]/img').first['src'],
+              description: enjoygram_image_container.xpath('.//div[@class="right"]//p[contains(@class, "desc")]').text,
+              comments: []
           }
 
-          @relatives << {
-              username: comment_container.xpath('.//div[@class="comment-content"]/a').text,
-              image: comment_container.xpath('.//a/img').first['src']
-          }
+          # Crawl each person that liked the image
+          enjoygram_image_container.xpath('.//div[@class="right"]//div[contains(@class, "likes")]/a').each do |enjoygram_liker|
+            @relatives << {
+                username: enjoygram_liker['href'],
+                image: enjoygram_liker.xpath('.//img').first['src']
+            }
+          end
 
-          enjoygram_image[:comments].push(enjoygram_comment)
+
+          # Crawl each image's comments
+          enjoygram_image_container.xpath('.//div[@class="right"]//div[@class="comments-wrapper"]/div[@class="comments-box"]/div[@class="comment"]').each do |comment_container|
+            enjoygram_comment = {
+                username: comment_container.xpath('.//div[@class="comment-content"]/a').text,
+                comment: comment_container.xpath('.//div[@class="comment-content"]/span[contains(@class, "text")]').text
+            }
+
+            @relatives << {
+                username: comment_container.xpath('.//div[@class="comment-content"]/a').text,
+                image: comment_container.xpath('.//a/img').first['src']
+            }
+
+            enjoygram_image[:comments].push(enjoygram_comment)
+          end
         end
 
         enjoygram_user[:images].push(enjoygram_image)

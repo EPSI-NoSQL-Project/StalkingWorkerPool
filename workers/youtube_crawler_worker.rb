@@ -31,7 +31,7 @@ class YoutubeCrawlerWorker < Worker
     youtubeFindUserURI << '&q=' << userToFind
     puts 'YOUTUBE URI - find : ' << youtubeFindUserURI
 
-    youtubeChannelsTML = Nokogiri::HTML(open(youtubeFindUserURI)) 
+    youtubeChannelsTML = Nokogiri::HTML(open(URI.encode(youtubeFindUserURI)))
     youtubeChannels = JSON.parse(youtubeChannelsTML)
 
     youtubeChannels['items'].each do |entry|
@@ -51,7 +51,7 @@ class YoutubeCrawlerWorker < Worker
       youtubeFindChannelURI << '&channelId='  << channelID[0]
       puts 'YOUTUBE - channel ' << youtubeFindChannelURI
 
-      youtubeVideosHTML = Nokogiri::HTML(open(youtubeFindChannelURI)) 
+      youtubeVideosHTML = Nokogiri::HTML(open(URI.encode(youtubeFindChannelURI)))
       youtubeVideos = JSON.parse(youtubeVideosHTML)
 
       youtubeVideos['items'].each do |entry|
@@ -63,7 +63,7 @@ class YoutubeCrawlerWorker < Worker
           @data.push({
             'videoId' => entry['id']['videoId'],
             'titre' => entry['snippet']['title'],
-            'description' => I18n.transliterate(entry['snippet']['description']),
+            'description' => entry['snippet']['description'], # I18n.transliterate(entry['snippet']['description']),
             'link' => link,
             'publishedAt' => entry['snippet']['publishedAt'],
             'preview' => preview,
